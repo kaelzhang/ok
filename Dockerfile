@@ -1,5 +1,7 @@
 FROM node:12-alpine
 
-ADD index.js .
+WORKDIR /usr/src/app
 
-CMD [ "node", "index.js" ]
+COPY index.js .
+
+CMD ["node", "index.js"]
